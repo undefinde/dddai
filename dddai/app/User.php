@@ -15,6 +15,8 @@ class User extends Model implements AuthenticatableContract,
                                     CanResetPasswordContract
 {
     use Authenticatable, Authorizable, CanResetPassword;
+    protected $primaryKey = 'uid';
+    public $timestamps = false;
 
     /**
      * The database table used by the model.
