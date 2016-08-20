@@ -28,8 +28,20 @@ Route::get('/auth/logout', 'Auth\AuthController@getLogout');
 //用户借款功能
 Route::get('/borrow', 'ProjectController@getBorrow');
 Route::post('/borrow', 'ProjectController@postBorrow');
+Route::get('/myzd', 'ProjectController@getZd');
+Route::get('/mytz', 'ProjectController@getTz');
+Route::get('/mysy', 'ProjectController@getSy');
+Route::get('/mydk', 'ProjectController@getDk');
+
 
 //管理员审核
 Route::get('/prolist', 'CheckController@checkList'); //审核列表
 Route::get('/check/{pid}', 'CheckController@check'); //管理员审核
 Route::post('/checked', 'CheckController@checked');
+
+//用户投资
+Route::get('/invest/{pid}', 'InvestController@getInvest');
+Route::post('/invest/{pid}', 'InvestController@postInvest');
+
+//生成收益路由
+Route::get('/grow', 'GrowController@getGrow');

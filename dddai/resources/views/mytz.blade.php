@@ -8,13 +8,13 @@
 <title>投资管理-我的投资</title>
 <meta content="点点贷、借出、借款" name="keywords">
 <meta content="点点贷" name="description">
-    
+
 <meta content="no-cache" http-equiv="pragma">
 <meta content="no-cache" http-equiv="cache-control">
 <meta content="0" http-equiv="expires">
 
 
-<link type="text/css" rel="stylesheet" href="/css/common.css"> 
+<link type="text/css" rel="stylesheet" href="/css/common.css">
 <link type="text/css" rel="stylesheet" href="/css/sea.css">
 <link type="text/css" rel="stylesheet" href="/css/style.css">
 
@@ -29,16 +29,16 @@
             <em class="fs_14 mr_5 tel_ico">客服热线</em><i class="aril">010-57155250</i>
             <span class="iphone"><i></i><a target="_blank" href="#">手机客户端</a>
             	<div class="webdown">
-                	
+
                 </div>
             </span>
-            
+
             <span class="hover_sina">
             	<a target="_blank" href="#"></a>
             </span>
             <span class="fs_12 ml_10">市场有风险，投资需谨慎</span>
         </div>
-        
+
         <div class="fr login clearfix">
             <input type="hidden" id="stok" value="7d58e2f8-2a05-4c97-a028-6c2a46e3562a">
             <div class="login_bt"><a class="fff" title="登录" rel="nofollow" href="#">登录</a><a class="fff" title="注册" rel="nofollow" href="#">注册</a></div>
@@ -48,7 +48,7 @@
                 <dd><a title="提现" rel="nofollow" target="_blank" href="#">提现</a></dd>
                 <dd><a title="我的投资" rel="nofollow" target="_blank" href="#">我的投资</a></dd>
                 <dd><a title="我的借款" rel="nofollow" target="_blank" href="#">我的借款</a></dd>
-                
+
             </dl>
             <div class="community"><a class="fc_white" rel="nofollow" target="_blank" href="#">关于我们</a></div>
         </div>
@@ -75,7 +75,7 @@
                 </li>
                  <li class="rela">
                  <a class="one" title="新手导航" target="_blank" href="#">新手导航</a>
- 
+
                 </li>
                 <li style="margin-right:0;">
                 	<a class="one" title="社区" target="_blank" href="#">社区 </a>
@@ -111,7 +111,7 @@
 	        </div>
     </div>
     <!--left nav end-->
-    
+
 <!--left nav end-->
     <!--right start-->
     <div class="clearfix main_wrapper">
@@ -135,18 +135,17 @@
                                    <th class="f">投资时间</th>
                                    <th class="f">投资状态</th>
                                 </tr>
-                                                                <tr>
-                                   <td class="f">25</td>
-                                   <td class="f">请接班人吃饭</td>
-                                   <td class="f">700元</td>
-                                   <td class="f">2016/05/10</td>
-                                   
-                                    <td class="f">
-                                                                                涨利中
-                                                                            </td> 
+                                @foreach($bid as $b)
+                                <tr>
+                                   <td class="f">{{$b->bid}}</td>
+                                   <td class="f">{{$b->title}}</td>
+                                   <td class="f">{{$b->money / 100}}元</td>
+                                   <td class="f">{{date('Y-m-d', $b->pubtime)}}</td>
+                                    <td class="f">涨利中</td>
                                 </tr>
+                                @endforeach
                             <tr>
-                                <td colspan="5"> 
+                                <td colspan="5">
                                 <div class="wujilu" id="errorMsg">暂无记录</div>
                                 </td>
                             </tr>
@@ -154,21 +153,21 @@
                              </table>
                             <!--table end-->
                             <div class="t_foot">
-                                
+
                                 <div class="r">
                             	<div class="fy">
                                 	<!--分页 str -->
                             	</div>
                         		</div>
-                                
+
                           </div>
                             <div class="tongji tj_nr01" id="tongji">
                             	待还本息 &nbsp;&nbsp;共 <span class="fc_orange bold" id="waitCapital"></span> 元，
-                            	应还罚息  共 <span class="fc_green bold" id="shouldFine"></span> 元 	
+                            	应还罚息  共 <span class="fc_green bold" id="shouldFine"></span> 元
                             </div>
-                            
+
                       </div>
-                     
+
                   </div>
                 </div>
             </div>
@@ -179,15 +178,15 @@
 <!--layout end-->
 
 <!--提示start-->
-<div style="display: none;" id="openMsg" class="plusBank mini page53"> 
-	<div class="topper clearfix"> 
-		<span id="msgTitle" class="fl fs_18">提示</span> 
-		<a id="msgCloseAll" class="fr"></a> 
-	</div> 
-	<div id="changyong" class="middle"> 
-		<div id="msgContent" class="content"></div> 
-		<div class="btnbox"><button id="msgClose" class="btn btnSize_1 btn_blue plus_c">确认</button></div> 
-	</div> 
+<div style="display: none;" id="openMsg" class="plusBank mini page53">
+	<div class="topper clearfix">
+		<span id="msgTitle" class="fl fs_18">提示</span>
+		<a id="msgCloseAll" class="fr"></a>
+	</div>
+	<div id="changyong" class="middle">
+		<div id="msgContent" class="content"></div>
+		<div class="btnbox"><button id="msgClose" class="btn btnSize_1 btn_blue plus_c">确认</button></div>
+	</div>
 </div>
 <!--提示end-->
 
@@ -220,7 +219,7 @@
                     <a class="a01" target="_blank" href="#"><i></i>联系我们</a><br>
                     <a class="a01" target="_blank" href="#"><i></i>网站地图</a><br>
                     <a class="a01" target="_blank" href="#"><i></i>服务地区</a><br>
-                </li>	
+                </li>
             </ul>
         </div>
         <div class="r">
@@ -251,8 +250,8 @@
         <div class="line1">
         	<ul class="lunbo1" style="margin-top: -48px;">
             <li>
-               	<a target="_blank" href="#">现金宝</a>丨  
-				<a target="_blank" href="#">人人贷</a>丨                
+               	<a target="_blank" href="#">现金宝</a>丨
+				<a target="_blank" href="#">人人贷</a>丨
 				<a target="_blank" href="#">陆金所</a>丨
 				<a target="_blank" href="#">拍拍贷</a>丨
 				<a target="_blank" href="#">南方基金</a>丨
@@ -277,15 +276,15 @@
                 <a target="_blank" href="#">网络贷款平台</a>丨
             </li>
 			<li>
-	            				
-	            				
-	            				
-	            				
-	            				
+
+
+
+
+
 	            				<a target="_blank" href="#">贷款计算器</a>丨
-	            				
-	            				
-	            				
+
+
+
 	            				<a target="_blank" href="#">商业贷款计算器</a>丨
 	            				<a target="_blank" href="#">按揭贷款计算器</a>丨
 	            				<a target="_blank" href="#">工资计算器</a>丨
@@ -302,12 +301,12 @@
 	            				<a target="_blank" href="#">理财计算器</a>丨
 	            				<a target="_blank" href="#">复利计算器</a>
 丨
-	            				
-	            				
-	            				
-	            				
+
+
+
+
 	            				<a href="#" target="_blank">资讯频道</a>丨
-	            				
+
 	            				<a href="#" target="_blank">标签</a>
 <a target="_blank" href="#">各国货币</a>|
 <a target="_blank" href="#">融资租赁</a>|
@@ -345,7 +344,7 @@
 <a target="_blank" href="#">X</a>|
 <a target="_blank" href="#">Y</a>|
 <a target="_blank" href="#">Z</a>|丨
-	            				
+
 			</li>
             </ul>
         </div>
@@ -389,11 +388,11 @@
 
 
 
-<link rel="stylesheet" href="/css/grey2013.css"> 
+<link rel="stylesheet" href="/css/grey2013.css">
 
 <!--时间  s-->
 
-<link type="text/css" rel="stylesheet" href="/css/jquery-ui.css"> 
+<link type="text/css" rel="stylesheet" href="/css/jquery-ui.css">
 
 <!--时间  e-->
 <!---静态化 - 头部内容---->

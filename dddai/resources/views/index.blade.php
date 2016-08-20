@@ -13,7 +13,7 @@
 
 
 
-<link type="text/css" rel="stylesheet" href="/css/common.css"> 
+<link type="text/css" rel="stylesheet" href="/css/common.css">
 <link type="text/css" rel="stylesheet" href="/css/index.css">
 
 
@@ -27,7 +27,7 @@
     <div class="header w1190 clearfix">
         <div class="fl tel">
             <em class="fs_14 mr_5 tel_ico">客服热线</em><i class="aril">010-57155250</i>
-                    
+
             <span class="iphone"><i></i>
             <a target="_blank" href="#">手机客户端</a>
             <div class="webdown"></div>
@@ -38,9 +38,9 @@
             <span class="fs_12 ml_10">市场有风险，投资需谨慎</span>
         </div>
         <div class="fr login clearfix">
-            
+
             <div class="login_bt"><a class="fff" title="登录" rel="nofollow" href="#">登录</a><a class="fff" title="注册" rel="nofollow" href="#">注册</a></div>
-            
+
             <dl>
                 <dt><a class="txnone" rel="nofollow" title="账户中心" href="#">账户中心</a></dt>
                 <dd><a title="充值" rel="nofollow" href="#">充值</a></dd>
@@ -60,7 +60,7 @@
                         <a href="#" class="defaultlogo"><img src="/image/logo1200.png"></a>
             </div>
         </div>
-        <div class="fr righ"> 
+        <div class="fr righ">
             <ul class="nav clearfix">
                 <li>
                     <a class="one" title="首页" href="#" rel="nofollow">首页</a>
@@ -103,19 +103,19 @@
 <div class="clearfix w1180 pt_20 index_main">
     <!--三大优势 s-->
         <!--新手专享 e-->
-        
+
         <!--月统计 s-->
     <!--三大优势 e-->
 
     <!--新用户专享一栏 s-->
-    
-    <!--新用户专享一栏 e-->    
+
+    <!--新用户专享一栏 e-->
 
     <!--广告 e-->
-    
+
 <div class="clearfix"></div>
 <!--竞猜宝start-->
-    
+
     <!--竞猜宝end-->
     <div class="clearfix"></div>
 
@@ -136,90 +136,43 @@
                 <!--r s-->
                 <div class="fl pro_con">
                     <!--1 s-->
+                    @foreach ($pros as $pro)
                     <div class="pro_bor">
                         <ul class="clearfix pro_list_box">
                             <li class="w1">
                                 <p class="fc_9 mb_5">预期年化 </p>
-                                <p class="fc_orange airal"><em class="fs_28">13.2</em>
-                                    <em class="fs_18">%</em>                       
+                                <p class="fc_orange airal"><em class="fs_28">{{$pro->rate}}</em>
+                                    <em class="fs_18">%</em>
                                 </p>
                             </li>
                             <li class="w2">
                                 <p class="fc_9 mb_5">期限</p>
-                                <p class="fc_6"><em class="fs_18">32</em>个月</p>
+                                <p class="fc_6"><em class="fs_18">{{$pro->hrange}}</em>个月</p>
                             </li>
                             <li class="w3">
                                 <p class="fc_9 mb_5">投资金额 </p>
-                                <p class="fc_6 airal fs_18">464.95</p>
+                                <p class="fc_6 airal fs_18">{{$pro->money / 100}}</p>
                             </li>
                             <li class="w4">
-                                <span class="b_jingdu b_jd86">86.03%</span>
+
+                                <span class="b_jingdu b_jd{{round($pro->receive / $pro->money)}}">{{round(($pro->receive / $pro->money)*100, 2)}}%</span>
                             </li>
                             <li class="w5">
-                                    <a class="btn btnSize_1 btn_orange" href="javascript:;">立即投标</a>
+                                    <a class="btn btnSize_1 btn_orange" href="{{url('/invest', $pro->pid)}}">立即投标</a>
                             </li>
                         </ul>
                     </div>
+                    @endforeach
                     <!--1 e -->
-                    <!--1 s-->
-                    <div class="pro_bor">
-                        <ul class="clearfix pro_list_box">
-                            <li class="w1">
-                                <p class="fc_9 mb_5">预期年化 </p>
-                                <p class="fc_orange airal"><em class="fs_28">13.2</em>
-                                    <em class="fs_18">%</em>                       
-                                </p>
-                            </li>
-                            <li class="w2">
-                                <p class="fc_9 mb_5">期限</p>
-                                <p class="fc_6"><em class="fs_18">32</em>个月</p>
-                            </li>
-                            <li class="w3">
-                                <p class="fc_9 mb_5">投资金额 </p>
-                                <p class="fc_6 airal fs_18">1,856.28</p>
-                            </li>
-                            <li class="w4">
-                                <span class="b_jingdu b_jd81">80.81%</span>
-                            </li>
-                            <li class="w5">
-                                    <a class="btn btnSize_1 btn_orange" href="javascript:;">立即投标</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--1 e -->
-                    <!--1 s-->
-                    <div class="pro_bor">
-                        <ul class="clearfix pro_list_box">
-                            <li class="w1">
-                                <p class="fc_9 mb_5">预期年化 </p>
-                                <p class="fc_orange airal"><em class="fs_28">13.2</em>
-                                    <em class="fs_18">%</em>                       
-                                </p>
-                            </li>
-                            <li class="w2">
-                                <p class="fc_9 mb_5">期限</p>
-                                <p class="fc_6"><em class="fs_18">20</em>个月</p>
-                            </li>
-                            <li class="w3">
-                                <p class="fc_9 mb_5">投资金额 </p>
-                                <p class="fc_6 airal fs_18">934.87</p>
-                            </li>
-                            <li class="w4">
-                                <span class="b_jingdu b_jd53">53.48%</span>
-                            </li>
-                            <li class="w5">
-                                    <a class="btn btnSize_1 btn_orange" href="javascript:;">立即投标</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--1 e -->
+
+
                     <!--1 e -->
                     <!--1 e -->
                 </div>
                 <!--r e-->
          </div>
         <!--列表2 e-->
-        
+
     </div>
     <!--left end-->
 <div class="clearfix fluid fl index_right">
@@ -256,7 +209,7 @@
                     <!--<li class="first">
                         <span><img src="http://static3.niwodai.com/Public/Static/201404/images/ind_par6.png" alt="广发银行"></span>
                         <a href="#" class="a6">
-                        点点贷会员账户资金<br>由广发银行存管<br> 
+                        点点贷会员账户资金<br>由广发银行存管<br>
                         </a>
                     </li>-->
                     <li>
@@ -283,7 +236,7 @@
                     <li>
                         <span><img width="185" height="84" alt="公安部第三研究所" src="/image/ind_par1.png"></span>
                         <a class="a6" href="#">
-                        点点贷信息安全通过<br> 
+                        点点贷信息安全通过<br>
                         公安部等保二级测评
                         </a>
                     </li>
@@ -294,8 +247,8 @@
     接报送上海资信有限公司
                         </a>
                     </li>
-                    
-                   
+
+
                 </ul>
          </div>
     <!--金额安全 e-->
@@ -303,7 +256,7 @@
 </div><!--content-->
 <!--content-->
 
-        
+
 <!-- 尾部开始 -->
 <div class="h35 clearfix"></div>
 <div class="foot1 wt_1190">
@@ -327,8 +280,8 @@
         <div class="line1">
             <ul class="lunbo1" style="margin-top: -48px;">
             <li>
-                <a target="_blank" href="#">现金宝</a>丨  
-                <a target="_blank" href="#">人人贷</a>丨                
+                <a target="_blank" href="#">现金宝</a>丨
+                <a target="_blank" href="#">人人贷</a>丨
                 <a target="_blank" href="#">陆金所</a>丨
                 <a target="_blank" href="#">拍拍贷</a>丨
                 <a target="_blank" href="#">南方基金</a>丨
@@ -425,10 +378,10 @@
 <a target="_blank" href="#">Z</a>|丨
                             <a href="#" target="_blank">前瞻财经</a>丨
                             <a href="#" target="_blank">外汇论坛</a>丨
-                            <a href="#" target="_blank">                    
+                            <a href="#" target="_blank">
                         A股中国</a>丨
                             <a href="#" target="_blank">银行利率</a>丨
-                            <a href="#" target="_blank">                 
+                            <a href="#" target="_blank">
                         汽车保险</a>丨
                             <p><a href="#" target="_blank">投资理财导航</a></p>丨
                             <a href="#" target="_blank">瞄股网</a>丨
@@ -555,11 +508,11 @@
 </div>
 <!-- weixin end -->
 
-<!-- 尾部结束 --> 
+<!-- 尾部结束 -->
 
 
 
 
 
- 
+
 </div></body></html>

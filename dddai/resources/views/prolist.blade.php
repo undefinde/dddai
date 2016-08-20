@@ -164,7 +164,7 @@
                                    <td class="f">{{$v->pid}}</td>
                                    <td>0</td>
                                    <td class="tr"><span>{{$v->name}}</span></td>
-                                   <td class="tr">{{$v->money}}</td>
+                                   <td class="tr">{{$v->money / 100}}</td>
                                    <td class="tr">{{$v->mobile}}</td>
                                    <td class="">
                                        @if ($v->status==0)

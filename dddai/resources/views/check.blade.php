@@ -138,8 +138,13 @@
                                         <td>性别:</td>
                                         <td>
                                             <select name="gender">
-                                            <option value="1">男</option>
-                                            <option value="0">女</option>
+												@if($project->gender == 1)
+                                            <option value="1" checked="checked">男</option>
+											<option value="0">女</option>
+												@else
+											<option value="1">男</option>
+											<option value="0" checked="checked">女</option>
+												@endif
                                             </select>
                                         </td>
                                     </tr>
@@ -154,7 +159,7 @@
                                     </tr>
                                     <tr>
                                         <td>借款金额:</td>
-                                        <td><input type="text" name="money" value="{{$project->money}}"></td>
+                                        <td><input type="text" name="money" value="{{$project->money / 100}}"></td>
                                     </tr>
                                     <tr>
                                         <td>月收入:</td>
