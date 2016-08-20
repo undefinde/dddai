@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use DB;
 class GrowController extends Controller
 {
+
+    protected $middleware = ['App\Http\Middleware\Authenticate'=>[]];
     //获取收益
     public function getGrow(){
         $today = date('Y-m-d', time());

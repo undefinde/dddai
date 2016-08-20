@@ -15,7 +15,9 @@ Route::get('/', 'IndexController@index');
 
 //用户注册路由
 Route::get('/auth/register', 'Auth\AuthController@getRegister');
-Route::post('/auth/register', 'Auth\AuthController@postRegister');
+Route::post('/auth/register', ['middleware'=>'App\Http\Middleware\EmailMiddleware',
+'uses'=>'Auth\AuthController@postRegister'
+]);
 Route::get('/home', 'IndexController@index');
 
 //用户登录
@@ -45,3 +47,10 @@ Route::post('/invest/{pid}', 'InvestController@postInvest');
 
 //生成收益路由
 Route::get('/grow', 'GrowController@getGrow');
+
+//中间件练习
+Route::get('/middle', ['middleware'=>'App\Http\middleware\EmailMiddleware',
+    function(){
+        echo 'controller';
+    }
+]);

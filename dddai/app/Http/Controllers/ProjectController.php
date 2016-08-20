@@ -11,6 +11,7 @@ use DB;
 
 class ProjectController extends Controller
 {
+    protected $middleware = ['App\Http\Middleware\Authenticate'=>[]];
     //
     public function getBorrow(){
         //var_dump(Auth::user());

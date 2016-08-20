@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "55e0189572197de0b563540cd8aae6d3",
-    "content-hash": "5bd58fd976f1ee3e9611bc37c006ec46",
+    "hash": "3c7b6b60bd52e3a1cf35074ce59b5bda",
+    "content-hash": "80296aceacd5ffccfb922e5ecd076b8f",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -742,6 +742,122 @@
                 "time"
             ],
             "time": "2015-11-04 20:07:17"
+        },
+        {
+            "name": "nette/mail",
+            "version": "v2.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/mail.git",
+                "reference": "44491710d30db970e731c3908c491d061a0e22df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/nette/mail/44491710d30db970e731c3908c491d061a0e22df.zip",
+                "reference": "44491710d30db970e731c3908c491d061a0e22df",
+                "shasum": ""
+            },
+            "require": {
+                "ext-iconv": "*",
+                "nette/utils": "~2.2",
+                "php": ">=5.3.1"
+            },
+            "conflict": {
+                "nette/nette": "<2.2"
+            },
+            "require-dev": {
+                "nette/di": "~2.3",
+                "nette/tester": "~1.3"
+            },
+            "suggest": {
+                "ext-fileinfo": "to detect type of attached files"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "Nette Mail: Sending E-mails",
+            "homepage": "https://nette.org",
+            "time": "2016-04-10 12:50:29"
+        },
+        {
+            "name": "nette/utils",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/utils.git",
+                "reference": "c455ade9f24a1f99aa81772516764045296b8ca0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/nette/utils/c455ade9f24a1f99aa81772516764045296b8ca0.zip",
+                "reference": "c455ade9f24a1f99aa81772516764045296b8ca0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "conflict": {
+                "nette/nette": "<2.2"
+            },
+            "require-dev": {
+                "nette/tester": "~2.0",
+                "tracy/tracy": "^2.3"
+            },
+            "suggest": {
+                "ext-gd": "to use Image",
+                "ext-iconv": "to use Strings::webalize() and toAscii()",
+                "ext-intl": "for script transliteration in Strings::webalize() and toAscii()",
+                "ext-mbstring": "to use Strings::lower() etc..."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "Nette Utility Classes",
+            "homepage": "https://nette.org",
+            "time": "2016-06-17 13:15:10"
         },
         {
             "name": "nikic/php-parser",

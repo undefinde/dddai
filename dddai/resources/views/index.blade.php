@@ -38,9 +38,11 @@
             <span class="fs_12 ml_10">市场有风险，投资需谨慎</span>
         </div>
         <div class="fr login clearfix">
-
+            @if(!Auth::user())
             <div class="login_bt"><a class="fff" title="登录" rel="nofollow" href="#">登录</a><a class="fff" title="注册" rel="nofollow" href="#">注册</a></div>
-
+            @else
+            <div class="login_bt"><a class="fff" title="登录" rel="nofollow" href="#">您好，{{Auth::user()->name}}</a></div>
+            @endif
             <dl>
                 <dt><a class="txnone" rel="nofollow" title="账户中心" href="#">账户中心</a></dt>
                 <dd><a title="充值" rel="nofollow" href="#">充值</a></dd>

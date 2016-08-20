@@ -12,6 +12,7 @@ use DB;
 class InvestController extends Controller
 {
     //
+    protected $middleware = ['App\Http\Middleware\Authenticate'=>[]];
     public function getInvest($pid){
         $pro = Project::find($pid);
         return view('invest', ['pro'=>$pro]);
